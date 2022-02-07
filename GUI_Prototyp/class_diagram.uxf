@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>20</y>
+      <w>270</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Product
+--
+- productNumber: String
+- name: String
+- price: float
+- picture: Picture
+- description: String
+- categories: Category[]
+--
++ getter/setter
++ Product(): Product
++ Product(prductNumber,name,price,picture,description,categories[])
++ equals(Product): boolean
++ toString(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>20</y>
+      <w>240</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>ShoppingCart
+--
+-instance: ShoppingCart
+
+-products: Product[]
+--
++getInstance(): ShoppingCart
+
++getter/setter
+-ShoppingCart(): ShoppingCart
++equals(ShoppingCart): boolean
++toString(): String
++addProduct(Product): boolean
++removeProduct(Product): boolean
++clearShoppingCart(); boolean
++printShoppingCart(); boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>330</y>
+      <w>270</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Category
+--
+-name: String
+-description: String
+--
++ getter/setter
++ Category(): Category
++ Category(description): Category
++ equals(Category): boolean
++ toString(): String
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>200</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+-username: String
+-password: char[]
+
+--
++ getter/setter
++ Employee(): Employee
++ Employee(username,password): Employee
++ equals(Employee): boolean
++ toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>440</y>
+      <w>240</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Customer
+--
+-name: String
+-surname: String
+-address: Address
+-phone: Phone
+-bankAccount: BankAccount
+--
++ getter/setter
++ Customer(): Customer
++ Customer(lastname,firstname,address,phone,bankAccount): Kunde
++ equals(Customer): boolean
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>790</x>
+      <y>240</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>70</y>
+      <w>110</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1020</x>
+      <y>450</y>
+      <w>220</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+-customer: Customer
+-shoppingCart: ShoppingCart
+--
++getter/setter
++Order(): Checkout
++sendOrder(): boolean
++printOrder(): boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>540</y>
+      <w>470</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;450.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>380</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>260</y>
+      <w>30</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>1270</w>
+      <h>680</h>
+    </coordinates>
+    <panel_attributes>de.glamazon.model
+layer=-1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1280</x>
+      <y>0</y>
+      <w>810</w>
+      <h>690</h>
+    </coordinates>
+    <panel_attributes>de.glamazon.gui
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1640</x>
+      <y>320</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Kasse
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1490</x>
+      <y>40</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Main
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1370</x>
+      <y>320</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Warenkorb
+--
+-id: Long
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+*-- Resp2*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1500</x>
+      <y>220</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1660</x>
+      <y>220</y>
+      <w>30</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>360</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Phone
+--
+-number: Int
+--
++ getter/setter
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>190</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Address
+--
+-street: String
+-number: Int
+-plz: Int
+-city: String
+
+--
++ getter/setter
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>530</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>BankAccount
+--
+-iban: String
+-bankName: String
+
+--
++ getter/setter
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>250</y>
+      <w>180</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>390</y>
+      <w>180</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>520</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>10</y>
+      <w>130</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Picture
+--
+-pictureName: String
+--
++ getter/setter
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>70</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
