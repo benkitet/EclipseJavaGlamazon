@@ -1,4 +1,4 @@
 # EclipseJavaGlamazon
 Glamazon Shop
 
-a little project for practising
+a small project to practice
