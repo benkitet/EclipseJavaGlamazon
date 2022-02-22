@@ -1,2 +1,2 @@
-# EclipseJavaGlamazon
+# Glamazon
 Glamazon Shop
